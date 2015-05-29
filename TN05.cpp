@@ -1,7 +1,7 @@
 /* 
   TN.cpp - Library for TN-05
   Tangible Networks
-  Espen Knoop, 25th Feb 2015
+  Espen Knoop, 28th May 2015
 */
 
 
@@ -28,6 +28,10 @@ TN::TN(double minVal, double maxVal) {
   pinMode(LED_B,OUTPUT);
   pinMode(SW,INPUT);
   pinMode(MSTR_D,INPUT);
+  pinMode(DIP0,INPUT);
+  pinMode(DIP1,INPUT);
+  ::digitalWrite(DIP0,HIGH);
+  ::digitalWrite(DIP1,HIGH);
   ::digitalWrite(SW,HIGH);
   _dacSetup();
   // Go through all the functions, to initialise state vars

@@ -1,8 +1,8 @@
 TN	KEYWORD1
 colour	KEYWORD2
 isConnected	KEYWORD2
+dip0	KEYWORD2
 dip1	KEYWORD2
-dip2	KEYWORD2
 sw	KEYWORD2
 pot	KEYWORD2
 masterConnected	KEYWORD2
