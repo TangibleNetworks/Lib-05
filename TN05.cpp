@@ -28,10 +28,10 @@ TN::TN(double minVal, double maxVal) {
   pinMode(LED_B,OUTPUT);
   pinMode(SW,INPUT);
   pinMode(MSTR_D,INPUT);
-  pinMode(DIP0,INPUT);
   pinMode(DIP1,INPUT);
-  ::digitalWrite(DIP0,HIGH);
+  pinMode(DIP2,INPUT);
   ::digitalWrite(DIP1,HIGH);
+  ::digitalWrite(DIP2,HIGH);
   ::digitalWrite(SW,HIGH);
   _dacSetup();
   // Go through all the functions, to initialise state vars
@@ -40,8 +40,8 @@ TN::TN(double minVal, double maxVal) {
     analogRead(i);
   }
   colour(0,0,0);
-  dip0();
   dip1();
+  dip2();
   masterRead();
   masterSw();
   pot();
@@ -178,9 +178,9 @@ void TN::digitalWrite(int value) {
 }
 
 
-// Get state of dip0 (1 is pressed)
-boolean TN::dip0() {
-  _dips[0] = ! ::digitalRead(DIP0);
+// Get state of dip2 (1 is pressed)
+boolean TN::dip2() {
+  _dips[0] = ! ::digitalRead(DIP2);
   return (_dips[0]);
 }
 

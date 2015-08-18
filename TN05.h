@@ -29,7 +29,7 @@
 #define LED_B 5
 #define POT A7
 #define SW 2
-#define DIP0 12
+#define DIP2 12
 #define DIP1 13
 #define SPKR 9
 
@@ -90,7 +90,7 @@ class TN {
     void digitalWrite(int value);
     
     // Get state of DIP switches (1 for on)
-    boolean dip0();
+    boolean dip2();
     boolean dip1();
     
     // Get state of switch (1 is pressed)
